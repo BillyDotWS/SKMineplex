@@ -7,26 +7,29 @@ You may use the Software as a library in your own projects without the requireme
 
 You do not modify the Software itself.
 You include a copy of this license in any distributed software that depends on this Software.
-
 2.2 Modification:
 If you modify the Software, you must:
 
 Release the modified version under this license or a compatible one.
 Make the source code of the modified version publicly available.
+3. Reselling and Commercial Distribution
+3.1 Prohibition on Reselling:
+You are not permitted to sell, sublicense, or otherwise commercially distribute the Software or its derivatives as standalone products, except with prior written consent from the licensor.
 
-3. Revocability
+3.2 Incorporation in Commercial Projects:
+You may use the Software as part of a larger project for commercial purposes, provided the Software is not the primary selling point of the project.
+
+4. Revocability
 The licensor reserves the right to revoke this license at their sole discretion, subject to a 90-day notice period provided in writing. Upon revocation:
 
 You must cease using the Software.
 Projects already distributed during the license's validity remain unaffected but must continue to comply with the original terms.
-
-4. Prohibited Use
+5. Prohibited Use
 The Software may not be used for:
 
 Activities in violation of applicable laws.
 Any purpose deemed harmful by the licensor (e.g., harmful AI or unethical practices).
-
-5. Disclaimer and Liability
+6. Disclaimer and Liability
 The Software is provided "as is," without warranty of any kind. The licensor is not liable for any damages arising from its use.
 
 6. Governing Law
