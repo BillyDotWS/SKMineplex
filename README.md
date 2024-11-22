@@ -36,7 +36,7 @@ After that, use Skript the same way as normal, dropping extra scripts into the f
 
 ## Contributing
 > [!CAUTION]  
-> This repository enforces a licence, meaning you cannot create a private version of this repository. Please contribute any improvements you make back to the base repository to assist in making it easier to use Skript on Mineplex for everyone! See [the license](/LICENSE) for more information.
+> This library enforces a licence, which states that you cannot create a private version of this work. Please contribute any improvements you make back to the base repository to assist in making it easier to use Skript on Mineplex for everyone! See [the license](/LICENSE) for more information.
 
 We welcome contributions to improve this project! Please follow these guidelines to ensure a smooth contribution process:
 
