@@ -1,0 +1,11 @@
+# basic details
+name: SKMineplex
+version: 1.0
+main: ws.billy.skmineplex.SKMineplex
+
+# dependencies
+depend: [ Skript, MineplexEngine ]
+
+# author details
+author: BillyDotWS
+website: https://billy.ws

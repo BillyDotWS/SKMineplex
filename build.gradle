@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'com.mineplex.sdk.plugin' version "1.6.0"
+}
+
+group = 'ws.billy.skmineplex'
+version = '1.0-SNAPSHOT'
+sourceCompatibility = '21'
+targetCompatibility = '21'
+
+ext {
+    spigotApiVersion = '1.21.1-R0.1-SNAPSHOT'
+    lombokVersion = '1.18.30'
+    jacksonCoreVersion = '2.15.2'
+    jacksonDatabindVersion = '2.15.2'
+    skriptVersion = '2.9.4'
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://repo.skriptlang.org/releases' }
+}
+
+dependencies {
+    compileOnly "org.spigotmc:spigot-api:${spigotApiVersion}"
+    compileOnly "org.projectlombok:lombok:${lombokVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-core:${jacksonCoreVersion}"
+    implementation "com.fasterxml.jackson.core:jackson-databind:${jacksonDatabindVersion}"
+    implementation "com.github.SkriptLang:Skript:${skriptVersion}"
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+tasks.register('shade', Jar) {
+    archiveClassifier = 'all'
+    from sourceSets.main.output
+    dependsOn configurations.runtimeClasspath
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE // or DuplicatesStrategy.IGNORE
+    manifest {
+        attributes(
+                'Implementation-Title': project.name,
+                'Implementation-Version': project.version
+        )
+    }
+}
+
+build.dependsOn shade
